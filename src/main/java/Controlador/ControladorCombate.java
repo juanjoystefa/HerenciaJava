@@ -1,8 +1,6 @@
 package Controlador;
 
 import Modelo.Personaje;
-import Modelo.Paladin;
-import Modelo.Ranger;
 import Vista.VistaCombate;
 
 public class ControladorCombate {
@@ -11,7 +9,12 @@ public class ControladorCombate {
     //y tambien a la vista
     private Personaje[] grupo;
     private VistaCombate vista;
+
     //logica de coordinacion
+    public ControladorCombate(Personaje[] grupo, VistaCombate vista) {
+        this.grupo = grupo;
+        this.vista = vista;
+    }
     
     public void ejecutarRonda(){
         vista.mostrarInicioDeCombate();
@@ -22,5 +25,3 @@ public class ControladorCombate {
         }
     }
 }
-
-grupo = new Personaje[]{ new Paladin(), new Ranger() };
